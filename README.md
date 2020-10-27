@@ -27,16 +27,16 @@ Things you may want to cover:
 
 ## users テーブル
 
-| Column           | Type    | Options      |
-| ---------------- | ------- | ------------ |
-| name             | string  | null: false  |
-| email            | string  | unique: true |
-| password         | string  | null: false  |
-| family_name      | string  | null: false  |
-| first_name       | string  | null: false  |
-| family_name_kana | string  | null: false  |
-| first_name_kana  | string  | null: false  |
-| birthday         | date    | null: false  |
+| Column             | Type    | Options      |
+| ------------------ | ------- | ------------ |
+| name               | string  | null: false  |
+| email              | string  | unique: true |
+| encrypted_password | string  | null: false  |
+| family_name        | string  | null: false  |
+| first_name         | string  | null: false  |
+| family_name_kana   | string  | null: false  |
+| first_name_kana    | string  | null: false  |
+| birthday           | date    | null: false  |
 
 ### Association
 
@@ -48,15 +48,15 @@ Things you may want to cover:
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| name          | string     | null: false                    |
-| explanation   | text       | null: false                    |
-| category      | integer    | null: false                    |
-| status        | integer    | null: false                    |
-| delivery_fee  | integer    | null: false                    |
-| shipping_area | integer    | null: false                    |
-| delivery_date | integer    | null: false                    |
-| value         | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
+| name             | string     | null: false                    |
+| explanation      | text       | null: false                    |
+| category_id      | integer    | null: false                    |
+| status_id        | integer    | null: false                    |
+| delivery_fee_id  | integer    | null: false                    |
+| shipping_area_id | integer    | null: false                    |
+| delivery_date_id | integer    | null: false                    |
+| value            | integer    | null: false                    |
+| user             | references | null: false, foreign_key: true |
 
 ### Association
 
