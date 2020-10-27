@@ -86,8 +86,9 @@ Things you may want to cover:
 | prefectures        | integer    | null: false                    |
 | cities             | string     | null: false                    |
 | address            | string     | null: false                    |
+| building_name      | string     |                                |
 | phone_number       | string     | null: false                    |
-| purchase_histories | references | null: false, foreign_key: true |
+| purchase_history   | references | null: false, foreign_key: true |
 
 
 ### Association
