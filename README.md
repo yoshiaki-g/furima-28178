@@ -46,8 +46,8 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
 | name             | string     | null: false                    |
 | explanation      | text       | null: false                    |
 | category_id      | integer    | null: false                    |
