@@ -68,6 +68,31 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Value is not a number")
       end
+      it "category_idが0の時は出品できない" do
+        @item.category_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Category must be other than 0")
+      end
+      it "status_idが0の時は出品できない" do
+        @item.status_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Status must be other than 0")
+      end
+      it "delivery_fee_idが0の時は出品できない" do
+        @item.delivery_fee_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Delivery fee must be other than 0")
+      end
+      it "shipping_area_idが0の時は出品できない" do
+        @item.shipping_area_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Shipping area must be other than 0")
+      end
+      it "delivery_date_idが0の時は出品できない" do
+        @item.delivery_date_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Delivery date must be other than 0")
+      end
     end
   end
 end
