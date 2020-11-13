@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    unless user_signed_in?
+    unless user_signed_in? && current_user.id == @item.user_id
       redirect_to action: :index
     end
   end
