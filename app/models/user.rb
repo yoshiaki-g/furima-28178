@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :items
-  has_many :purchase_histories
+  has_many :orders
   VALID_ZENKAKU = /\A[ぁ-んァ-ン一-龥]/
   VALID_ZENKAKU_KANA = /\A[ァ-ヶー－]+\z/
   with_options presence: true do

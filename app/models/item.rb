@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipping_area
   belongs_to_active_hash :delivery_date
   belongs_to :user
-  has_one :purchase_history
+  has_one :order
   has_one_attached :image
   integer_long  = { numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 } }
   INTEGER_LONG_REQUIRED  = integer_long.merge(presence: true)
