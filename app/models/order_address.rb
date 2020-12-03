@@ -2,7 +2,7 @@ class OrderAddress
   include ActiveModel::Model
   attr_accessor :postal_code, :prefecture_id, :cities, :address, :building_name, :phone_number, :token, :user_id, :item_id
   with_options presence: true do
-    validates :prefecture_id, :cities, :address, :token
+    validates :prefecture_id, :cities, :address, :token, :user_id, :item_id
     validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: "Input correctly" }
     validates :phone_number, format: {with: /\A\d{10,11}\z/, message: "Input only number"}
   end
