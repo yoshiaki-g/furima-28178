@@ -6,8 +6,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipping_area
   belongs_to_active_hash :delivery_date
   belongs_to :user
-  has_one :purchase_history
-  has_one_attached :image
+  has_one :order
   integer_long  = { numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 } }
   INTEGER_LONG_REQUIRED  = integer_long.merge(presence: true)
 
@@ -19,4 +18,6 @@ class Item < ApplicationRecord
   with_options numericality: { other_than: 0 } do
     validates :category_id, :status_id, :delivery_fee_id, :shipping_area_id, :delivery_date_id
   end
+  has_one_attached :image
+
 end
