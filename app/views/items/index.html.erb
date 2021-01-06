@@ -188,9 +188,9 @@
 <div class='purchase-btn'>
   <span class='purchase-btn-text'>出品する</span>
   <% if user_signed_in? %>
-      <%= link_to image_tag('camera.png', size: '185x50' ), new_item_path, method: :get, class: "purchase-btn-icon" %>
+      <%= link_to image_tag('camera.png', size: '65x50' ), new_item_path, method: :get, class: "purchase-btn-icon" %>
   <% else %>
-      <%= link_to image_tag('camera.png', size: '185x50' ), new_user_session_path, method: :get, class: "purchase-btn-icon" %>
+      <%= link_to image_tag('camera.png', size: '65x50' ), new_user_session_path, method: :get, class: "purchase-btn-icon" %>
   <% end %>
 </div>
 <%= render "shared/footer" %>
